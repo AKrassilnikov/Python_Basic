@@ -8,13 +8,12 @@ y2 = float(input('Y: '))
 
 x_diff = x1 - x2
 y_diff = y1 - y2
+print("\nУравнение прямой, проходящей через эти точки:")
 if y_diff == 0:
-    k = x_diff
+    print("y = ", y1)
 elif x_diff == 0:
-    k = y_diff
+    print("x = ", x1)
 else:
     k = y_diff / x_diff
-b = y2 - k * x2
-
-print("Уравнение прямой, проходящей через эти точки:")
-print("y = ", k, " * x + ", b)
+    b = y2 - k * x2
+    print("y = ", k, " * x + ", b)
