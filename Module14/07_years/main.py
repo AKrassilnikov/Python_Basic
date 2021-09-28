@@ -9,7 +9,7 @@ def years(start_year,stop_year):
                 count_2 += 1
         if count_2 == count_1 and (count_2 == count_1) == 3:
             continue
-        elif (count_1 or count_2) == 3:
+        elif count_1 == 3 or count_2 == 3:
             year_list.append(year)
         count_2 = 0
         count_1 = 0

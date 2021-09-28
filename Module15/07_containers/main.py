@@ -14,7 +14,10 @@ for weigh_conteiners in range(len(containers_list)):
     if containers_list[weigh_conteiners] > new_conteiner and containers_list[weigh_conteiners + 1] < new_conteiner or containers_list[weigh_conteiners] == new_conteiner:
         containers_list.insert(weigh_conteiners + 1,new_conteiner)
         break
-print("Список контейнеров",containers_list)
+    elif containers_list[weigh_conteiners] < new_conteiner:
+        containers_list.insert(0, new_conteiner)
+        break
+print("Позиция нового контейнера: ",containers_list.index(new_conteiner) + 1)
 
 
 

@@ -7,6 +7,6 @@ for i in range(core_number):
     effect = int(input())
     core_list.append(effect)
 for e_core in range(len(core_list)):
-    if core_list[e_core] < e_core:
+    if core_list[e_core] <= e_core:
         bad_list.append(core_list[e_core])
 print("\nНеподходящие значения: ", bad_list)

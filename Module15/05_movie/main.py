@@ -11,7 +11,12 @@ while True:
         if my_film == film:
             flag = True
     if flag == True:
-        my_films.append(my_film)
+        for same in my_films:
+            if same == my_film:
+                print("Такое фильм уже есть в списке")
+                break
+        else:
+            my_films.append(my_film)
     else:
         print("Фильма в списке нет")
     flag = False
