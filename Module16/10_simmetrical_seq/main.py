@@ -12,6 +12,8 @@ rev_list.remove(rev_list[0])
 for _ in range(len(rev_list)):
     if rev_list[0] == num_list[len(num_list) - 1]:
         rev_list.remove(rev_list[0])
+if num_list[len(num_list) - 1] == num_list[len(num_list) - 3]:
+    rev_list = num_list[0]
 print(rev_list)
 print("Необходимо добавить: ",rev_list)
 

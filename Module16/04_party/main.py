@@ -11,8 +11,11 @@ while True:
             print("Привет", name)
     elif action == 'ушёл':
         name = input("Ведите имя: ")
-        guests.remove(name)
-        print("Пока", name)
+        if guests.count(name) == False:
+            print("Такого человека нет")
+        else:
+            guests.remove(name)
+            print("Пока", name)
     elif action == 'Пора спать':
         break
     print()

@@ -25,6 +25,7 @@ for foot_size in foots_list:
     for skates_size in skates_list:
         if foot_size == skates_size:
             count += 1
+            skates_list.remove(foot_size)
             break
-    skates_list.remove(foot_size)
-print(count)
+
+print("Наибольшее кол-во людей, которые могут взять ролики: ",count)
