@@ -23,7 +23,7 @@ count = 0
 
 for foot_size in foots_list:
     for skates_size in skates_list:
-        if foot_size == skates_size:
+        if foot_size >= skates_size:
             count += 1
             skates_list.remove(foot_size)
             break
