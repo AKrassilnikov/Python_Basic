@@ -1,7 +1,12 @@
 
 def alphavit_leter(id):
-    leter = [alphavit[leter + step] for leter in range(len(alphavit)) if alphavit[leter] == text[id]]
-    return "".join(leter)
+    leter_list = ""
+    for leter in range(len(alphavit)):
+        if alphavit[leter] == text[id] and leter + step <= len(alphavit):
+            leter_list += alphavit[leter + step]
+        elif alphavit[leter] == text[id] and leter + step > len(alphavit):
+            leter_list += alphavit[0 + (step - (len(alphavit) - leter))]
+    return "".join(leter_list)
 
 alphavit = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 text = list(input("Введите текст: "))
