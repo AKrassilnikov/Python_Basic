@@ -1,6 +1,6 @@
 from sys import exit
 ip_addres = input("Введите IP адрес: ").split(".")
-if len(ip_addres) < 4:
+if len(ip_addres) != 4:
     print("Адрес - это четыре числа, разделённые точками")
     exit()
 for octet in ip_addres:
