@@ -6,8 +6,7 @@ def rev_string(string,symbols_list):
             return symb.join(sep_rev_list)
 
 symbols_list = list("!,.:;@#&?")
-text = input("Введите текст: ")
-text_list = text.split()
+text_list = input("Введите текст: ").split()
 new_List = []
 for string in text_list:
     if string.isalnum() == False:

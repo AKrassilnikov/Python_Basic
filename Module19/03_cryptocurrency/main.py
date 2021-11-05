@@ -1,6 +1,4 @@
-data = {
-    "address": "0x544444444444",
-    "ETH": {
+data = { "address": "0x544444444444", "ETH": {
         "balance": 444,
         "total_in": 444,
         "total_out": 4
@@ -45,4 +43,10 @@ data = {
 }
 
 
-# TODO здесь писать код
+print(len(data["ETH"]))
+while True:
+    if data.get()
+
+
+
+

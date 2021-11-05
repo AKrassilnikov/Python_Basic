@@ -23,5 +23,16 @@ store = {
         {'quantity': 43, 'price': 97},
     ],
 }
+summ_price = 0
+summ_qa = 0
+for keys in goods.keys():
+    value = goods.get(keys)
+    for num in range(len(store[value])):
+        summ_qa += store[value][num]['quantity']
+        price_all = store[value][num]['quantity'] * store[value][num]["price"]
+        summ_price += price_all
+    print(keys, ":","колл-во -",summ_qa,'цена',summ_price)
+    summ_price = 0
+    summ_qa = 0
 
-# TODO здесь писать код
+
