@@ -44,8 +44,7 @@ data = { "address": "0x544444444444", "ETH": {
 
 
 print(len(data["ETH"]))
-while True:
-    if data.get()
+
 
 
 

@@ -6,7 +6,6 @@ def can_make_pal(text):
             d[a]=1
         else:
             d[a]+=1
-    print(d)
     n=len(d)
     e=0
     for a in d.values():
