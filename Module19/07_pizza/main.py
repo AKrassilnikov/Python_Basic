@@ -15,8 +15,11 @@ for num in range(number):
             order_dict[order[0]].update(person)
     else:
         order_dict[order[0]] = person
-for key in order_dict.keys():
+for key in sorted(order_dict.keys()):
     print("{}:".format(key))
-    for value in order_dict[key].keys():
+    for value in sorted(order_dict[key].keys()):
          print(" {}: ".format(value),order_dict[key][value])
+
+
+
 
