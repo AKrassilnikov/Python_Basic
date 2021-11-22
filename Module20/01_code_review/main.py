@@ -20,25 +20,19 @@ students = {
 }
 
 
-def f(dict):
-    lst = []
+def def_list(dict):
+    hobby_list = []
     string = ''
     for i in dict:
-        lst += (dict[i]['interests'])
+        hobby_list += (dict[i]['interests'])
         string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
-
+    return hobby_list, len(string)
 
 pairs = []
 for i in students:
-    pairs += (i, students[i]['age'])
+    print("ID {} возраст {}".format(i, students[i]['age']))
+
+hobby_list, surname_length = def_list(students)
+print("Список хобби {}, \nДлина символов фамилий {}".format(hobby_list, surname_length))
 
 
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
-
-# TODO исправить код
