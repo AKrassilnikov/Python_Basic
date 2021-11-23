@@ -1,5 +1,3 @@
-def score_key(a):
-    return a[1][0] * 100000000 - a[1][1]
 
 score_table = { }
 number_rows = int(input('Общее количество строк протокола: '))
@@ -15,7 +13,7 @@ for time in range(number_rows):
         score_table[name] = [ball, time]
 scores = list(score_table.items())
 
-scores.sort(key=score_key, reverse=True)
+scores.sort(reverse = True)
 print('\nИтоги соревнований: ')
 for winner_index in 0, 1, 2:
     print(f' { winner_index + 1 } место { scores[winner_index][0] } ', end=' ')
