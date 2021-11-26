@@ -1,8 +1,6 @@
 
 def summ(a):
-    score = str(a[1][0])
-    sum_nums = [int(score[num]) for num in range(len(score))]
-    return sum(sum_nums)
+    return a[1][0]
 
 score_table = {}
 number_rows = int(input('Общее количество строк протокола: '))
@@ -17,6 +15,8 @@ for time in range(number_rows):
     else:
         score_table[name] = [ball, time]
 scores = list(score_table.items())
+
+print(scores)
 scores.sort(key=summ,reverse = True)
 print('\nИтоги соревнований: ')
 for winner_index in 0, 1, 2:
