@@ -1,9 +1,12 @@
 def calculating_math_func(data):
-    result = 1
-    for index in range(1, data + 1):
-        result *= index
-    result /= data ** 3
-    result = result ** 10
-    return result
+    if data == 1:
+        return 1
+    factorial_nim_1 = calculating_math_func(data - 1)
+    factorial = data * factorial_nim_1
+    return factorial
 
-# TODO оптимизировать функцию
+number = int(input("Input number: "))
+data = calculating_math_func(number)
+data /= number ** 3
+data = data ** 10
+print("Result :",data)
