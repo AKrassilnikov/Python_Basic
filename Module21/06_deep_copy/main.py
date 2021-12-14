@@ -1,3 +1,4 @@
+import copy
 site = {
     'html': {
         'head': {
@@ -11,18 +12,24 @@ site = {
     }
 }
 
-def new_sites(site,site_number,product_name):
+def func_all(site):
+    for _ in range(question):
+        product = input('Введите название продукта для нового сайта: ').lower()
+        print(f'Сайт для {product}:')
+        site_copy = copy.deepcopy(site)
+        site_copy['html']['head']['title'] = f'Куплю/продам {product} недорого'
+        site_copy['html']['body']['h2'] = f'У нас самая низкая цена на {product}'
+        func(site_copy)
 
-    for sub_site_code in site.values():
-        if isinstance(sub_site_code,dict):
-            sub_site_code[0]['title'] = 'Куплю/продам {} недорого'.format(product_name)
-            sub_site_code[1]['h2'] = 'У нас самая низкая цена на {}'.format(product_name)
-    return site
+
+def func(s, depth=0):
+    for i in s:
+        print(' ' * depth, i)
+        if isinstance(s[i], dict):
+            func(s[i], depth + 1)
+        else:
+            print(' ' * (depth + 1), ' '.join(s[i]))
 
 
-
-
-site_number = int(input("Сколько сайтов: "))
-product_name = ['Tesla']
-output = new_sites(site,site_number,product_name)
-print(output)
+question = int(input('\nСколько будет сайтов: '))
+func_all(site)
