@@ -17,3 +17,5 @@ for a in my_zip("asdf", "123456"):
 
 for a in my_zip(('a', 'b', 'c'), [1, 2, 3, 4, 5]):
     print(a)
+
+
