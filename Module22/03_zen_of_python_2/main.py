@@ -23,18 +23,11 @@ for line in zen_file:
 zen_file.close()
 zen_file = open(os.path.abspath('zen.txt'),'r')
 min_count_leter = min_leter(zen_file.read()) # each leter count
-min = max(min_count_leter.values())
-a = []
-for key in min_count_leter.keys():
-    if min_count_leter[value] < min:
-        min = min_count_leter[value]
-
-
-
+zen_file.close()
 print('Количество букв в файле: ',sum(len_lines))
 print('Количество слов в файле: ',sum(line_words_count))
 print('Количество строк в файле:',line_count)
-print('Наиболее редкая буква:',)
+print('Наиболее редкая буква:',list(min_count_leter.keys())[list(min_count_leter.values()).index(sorted(min_count_leter.values())[0])],":", sorted(min_count_leter.values())[0])
 
 
 
