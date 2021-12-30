@@ -7,6 +7,7 @@ summ_leters = 0
 for line in voyna_i_mir.readlines():
     summ_leters += len(line)
 voyna_i_mir.close()
+unzip.close()
 print("Всего символов: ",summ_leters)
 
 

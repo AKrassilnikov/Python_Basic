@@ -1,3 +1,4 @@
+
 import os
 data = input("Input data: ")
 input_path = input("Input dir path over space: ").split()

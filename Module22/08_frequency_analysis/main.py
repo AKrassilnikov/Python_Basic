@@ -17,9 +17,29 @@ count_leter,text_len = leter_count(text_file.read())
 leter_part = {}
 for key in count_leter.keys():
     leter_part[key] = round((count_leter[key] * 100/text_len)/100,3)
+leter_part_list= list(leter_part.items())
+leter_part_list.sort(key=lambda val: val[1],reverse=True)
+print(leter_part_list)
 text_file = open("analysis.txt", 'w')
-for pare in list(leter_part.items()):
+for pare in leter_part_list:
     text_file.writelines([pare[0],':',str(pare[1]),'\n'])
 text_file.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

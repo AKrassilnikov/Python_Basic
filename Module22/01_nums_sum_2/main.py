@@ -4,7 +4,7 @@ num_list = file_num.read()
 print('Содержимое файла numbers.txt: \n',num_list)
 num2_list = []
 for num in num_list:
-    if num == "2":
+    if num.isdigit():
         num2_list.append(int(num))
 file_num.close()
 file_num_answer = open(os.path.abspath('answer.txt'),'w')
