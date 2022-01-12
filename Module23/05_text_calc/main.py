@@ -1,7 +1,7 @@
 
 def def_calc(calculate):
-    first = int(calculate[0])
-    second = int(calculate[2])
+    first = float(calculate[0])
+    second = float(calculate[2])
     action_list = ['+','-','/','*','**']
     action = 0
     for calc in range(len(action_list)):
@@ -18,8 +18,12 @@ def def_calc(calculate):
     elif action == 5:
         return first ** second
     elif action == 0:
-        return "Action is not dedicated"
-
+        return "Action is not defined"
+calc_summ = 0
 with open("calc.txt",'r') as calc_file:
     for line in calc_file.readlines():
-        print("Result =", def_calc(line.split()))
+        result_calc = def_calc(line.split())
+        print(result_calc)
+        if not isinstance(result_calc,str):
+            calc_summ += result_calc
+print("Result =",calc_summ)

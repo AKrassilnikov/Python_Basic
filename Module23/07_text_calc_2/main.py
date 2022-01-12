@@ -7,8 +7,8 @@ def def_calc(data):
     return action
 
 def def_action(action,line):
-    first = int(line[0])
-    second = int(line[2])
+    first = float(line[0])
+    second = float(line[2])
     if action == 1:
       return first + second
     elif action == 2:
@@ -20,8 +20,8 @@ def def_action(action,line):
     elif action == 5:
         return first ** second
     elif action == 0:
-        return "Action is not dedicated"
-
+        return "Action is not defined"
+calc_summ = 0
 with open("calc.txt",'r') as calc_file:
     for line in calc_file.readlines():
         result = def_calc(line.split())
@@ -32,8 +32,13 @@ with open("calc.txt",'r') as calc_file:
                 line_change = line.split()
                 line_change[1] = input("Enter action: ")
                 result = def_calc(line_change)
-                print("Result =", def_action(result, line.split()))
+                result = def_action(result, line.split())
+                calc_summ += result
+                print("Result =", result)
             if change == 'no':
                 print("Result =", def_action(result, line.split()))
         else:
-            print("Result =", def_action(result,line.split()))
+            result = def_action(result, line.split())
+            calc_summ += result
+            print("Result =",result)
+print('Summ results = ',calc_summ)

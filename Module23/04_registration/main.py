@@ -5,7 +5,7 @@ def read_lines(line):
     list_line = line.split()
     if len(list_line) < 3:
         bad_log.write(str(line)[:-1] + ' IndexError\n')
-    elif 10 > int(list_line[2]) or int(list_line[2]) > 99:
+    elif not list_line[2].isdigit() or 10 > int(list_line[2]) or int(list_line[2]) > 99:
         bad_log.write(str(line)[:-1] + ' ValueError\n')
     elif not list_line[0].isalpha():
         bad_log.write(str(line)[:-1] + ' NameError\n')
