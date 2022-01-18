@@ -1,0 +1,3 @@
+Popov Great-1 4 4 4 4 4
+Petrov Great-2 4 5 3 4 5
+Mashkov Great-1 3 3 5 4 4
