@@ -3,7 +3,6 @@ class Square:
         self.number = number
         self.count = 0
 
-
     def __iter__(self):
         return self
 
@@ -30,7 +29,6 @@ for num in gen_sqr(number):
     print(num, end=" ")
 
 print("\nGen expression: ")
-
 
 numbers = (num ** 2 for num in range(1,number + 1))
 print(*numbers)
