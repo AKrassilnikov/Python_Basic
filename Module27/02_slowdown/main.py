@@ -1,5 +1,6 @@
 from time import sleep
 from typing import Callable,Any
+import functools
 
 def slowdown_2s(func: Callable) -> Callable:
     """
@@ -8,7 +9,7 @@ def slowdown_2s(func: Callable) -> Callable:
     :param func:
     :return:
     """
-    # @wraps(func)
+    @functools.wraps(func)
     def wrapper(*args, **kwargs) -> Any:
         """
         Функция - обертка
