@@ -11,7 +11,7 @@ class Mymath:
 
     @classmethod
     def circle_are(cls,number) -> float:
-        """ Площадь окружности S = пr2"""
+        """ Площадь окружности S = пr2 """
         return math.pi * number ** 2
 
     @classmethod
