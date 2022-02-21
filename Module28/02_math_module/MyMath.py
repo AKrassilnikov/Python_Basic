@@ -3,27 +3,25 @@ import math
 class Mymath:
     """ Класс математический вычеслений """
 
-    def __init__(self,number : int) -> None:
-        """ Функция принимающая параметр фигуры
-        :param number:
-        """
-        self.number = number
-
-    def circle_length(self) -> float:
+    @classmethod
+    def circle_length(cls,number) -> float:
         """ Длина окружности d = 2r"""
-        diametr = self.number * 2
+        diametr = number * 2
         return math.pi * diametr
 
-    def circle_are(self) -> float:
+    @classmethod
+    def circle_are(cls,number) -> float:
         """ Площадь окружности S = пr2"""
-        return math.pi * self.number ** 2
+        return math.pi * number ** 2
 
-    def qube_area(self) -> float:
+    @classmethod
+    def qube_area(cls,number) -> float:
         """ Площадь куба V = S3 """
-        s = self.number * math.sqrt(2)
+        s = number * math.sqrt(2)
         return s ** 3
 
-    def sphere_area(self):
+    @classmethod
+    def sphere_area(cls,number) -> float:
         """Пощадь сферы S = 4пr2 """
-        return 4 * math.pi * self.number ** 2
+        return 4 * math.pi * number ** 2
 
