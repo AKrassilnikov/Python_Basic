@@ -1,12 +1,29 @@
-import time
+from time import sleep
 from typing import Callable,Any
+import functools
 
-def timer(func:Callable) -> Callable:
-    """ Checking code changes with timer """
-    time.sleep(3)
-    return func
+def slowdown_2s(func: Callable) -> Callable:
+    """
+    Декоратор для замедления работы функции.
 
-@timer
+    :param func:
+    :return:
+    """
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs) -> Any:
+        """
+        Функция - обертка
+
+        :param args:
+        :param kwargs:
+        :return:
+        """
+        sleep(2)
+        result = func(*args, **kwargs)
+        return result
+    return wrapper
+
+@slowdown_2s
 def chec_web_site() -> Any:
     print("Checking code changes")
 

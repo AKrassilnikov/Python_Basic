@@ -5,7 +5,7 @@ def counter(function):
 
 @counter
 def count():
-    return  1
+    return 1
 
 number = 0
 
