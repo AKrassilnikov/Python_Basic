@@ -4,7 +4,7 @@ numbers = [22, 33, 10, 6894, 11, 2, 1]
 
 
 
-floats_new = list(map(lambda num: round(num ** 3,3),floats))
+floats_new = list(map(lambda number: round(number ** 3,3),floats))
 names_new = list(filter(lambda name: len(name) > 5,names))
 numbers_new = sum(map(lambda number:number , numbers))
 
